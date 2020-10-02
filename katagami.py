@@ -204,7 +204,7 @@ if __name__ == "__main__":
         center_list = np.loadtxt('center_list_data/' + img_name.replace('.png', '') + '.csv', delimiter=',').T
         
         #点を表示
-        show_point_scatter(center_list)
+        show_point_scatter(center_list, 500, 500)
         #show_point_scatter(center_list, 500, 500, file_name='komon_result/' + img_name)
         
         
@@ -225,7 +225,7 @@ if __name__ == "__main__":
         co_list = first_neighbors(distances, indices, thres)
 
         show_co_list(co_list)
-        show_first_scatter(co_list)
+        show_first_scatter(co_list, w, h)
         #show_co_list(co_list, file_name='histogram/' + img_name)
         #show_first_scatter(co_list, w, h, file_name='color/' + img_name)
         
